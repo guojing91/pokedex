@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="database.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>The Kanto Pokédex</title>
+</head>
+
+<body>
+    <div class="dropdown-tile" id="dropdown-tile">
+        <div class="title">
+            <h1>The Kanto Pokédex</h1>
+            <h3>The original 151 from the Kanto Region</h3>
+        </div>
+        <div class="dropdown-user-input">
+            <p>Pokemon:</p>
+            <div class="dropdown" id="dropdown">
+                <input class="input-area" type="text" placeholder="Type and click to select" id="searchInput">
+                <div class="dropdown-content" id="dropdownItems">
+                    <a href="#" class="item">Bulbasaur</a>
+                    <a href="#" class="item">Charmander</a>
+                    <a href="#" class="item">Squirtle</a>
+                </div>
+            </div>
+            <button id="actionButton">Search</button>
+        </div>
+    </div>
+    <div class="main-info">
+        <div class="name-and-meta" id="nameAndMeta">
+            <div class="dex-no" id="dexNo"></div>
+            <div class="pokemon-name" id="pokemonName"></div>
+            <div class="pokemon-genus" id="pokemonGenus"></div>
+        </div>
+        <div class="official-art" id="officialArt">
+            <div class="front" id="front">
+                <img src="" alt="">
+            </div>
+            <div class="shiny" id="shiny">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="main-info-sub">
+            <div class="main-info-1">
+                <div class="abilities" id="abilities">
+                </div>
+                <div class="ability-popup" id="abilityPopup">
+                    <div class="ability-title" id="abilityTitle"></div>
+                    <button class="close-button" id="closeButton">&times;</button>
+                    <div class="ability-body" id="abilityBody"></div>
+                </div>
+                <div class="types" id="types"></div>
+            </div>
+            <div class="main-info-2">
+                <div class="stats" id="stats"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="move-table-level" id="moveTableLevel"></div>
+        <div class="move-table-tm" id="moveTableTM"></div>
+        <div class="move-table-egg" id="moveTableEgg"></div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="move-popup" id="movePopup">
+        <div class="move-header">
+            <div class="move-title" id="moveTitle"></div>
+            <button class="close-button" id="closeButton">&times;</button>
+        </div>
+        <div class="move-body">
+            <div class="move-info">
+                <div class="move-type">
+                    <div class="move-type-title" id="moveTypeTitle">Type</div>
+                    <div class="move-type-value" id="moveTypeValue"></div>
+                </div>
+                <div class="damage-class">
+                    <div class="damage-class-title" id="damageClassTitle">Damage Class</div>
+                    <div class="damage-class-value" id="damageClassValue"></div>
+                </div>
+                <div class="base-power">
+                    <div class="base-power-title" id="basePowerTitle">Base Power</div>
+                    <div class="base-power-value" id="basePowerValue"></div>
+                </div>
+                <div class="accuracy">
+                    <div class="accuracy-title" id="accuracyTitle">Accuracy</div>
+                    <div class="accuracy-value" id="accuracyValue"></div>
+                </div>
+            </div>
+            <div class="move-description">
+                <div class="move-description-title" id="moveDescriptionTitle">Description</div>
+                <div class="move-description-value" id="moveDescriptionValue"></div>
+            </div>
+            <div class="move-effect">
+                <div class="move-effect-title" id="moveEffectTitle">Effects</div>
+                <div class="move-effect-value" id="moveEffectValue"></div>
+            </div>
+        </div>
+    </div>
+    <div class="evolution" id="evolution">
+        <div class="base-evo" id="baseEvo"></div>
+        <div class="first-evo" id="firstEvo"></div>
+        <div class="second-evo" id="secondEvo"></div>
+    </div>
+    <div class="note-container">
+        <div class="note">
+            <h5>Note:</h5>
+            <h6>1. All information is obtained from the free open-source RESTful API [pokeapi.co] using the "fetch"
+                method
+                on JavaScript.</h6>
+            <h6>2. All information including Abilities, Movesets and Description for Pokémon available in Generation
+                9
+                are
+                based on entries from Pokémon Scarlet and Violet.</h6>
+            <h6>3. All information including Abilities, Movesets and Description for Pokémon not available in
+                Generation
+                9
+                but available in Generation 8 are based on entries from Pokémon Brilliant Diamond and Shining Pearl.
+            </h6>
+            <h6>4. Information for New Moves introduced in Generation 9 is NOT 100% complete.</h6>
+            <h6>5. Pokémon evolution lines consist of all evolution stages throughout the game but Pokémon not
+                available
+                from the original Kanto Region will have no information available on this Pokédex.</h6>
+        </div>
+    </div>
+</body>
+
+</html>
