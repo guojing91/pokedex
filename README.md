@@ -1,0 +1,2 @@
+# pokedex
+Starting from Kanto
